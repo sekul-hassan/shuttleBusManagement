@@ -1,12 +1,12 @@
 import './App.css';
 import '../src/Assets/CSS/Custom.css';
 import {Fragment} from "react";
-import Home from "./Pages/Home";
+import RegisterPage from "./Pages/RegisterPage";
 
 function App() {
   return (
    <Fragment>
-       <Home/>
+       <RegisterPage/>
    </Fragment>
   );
 }
