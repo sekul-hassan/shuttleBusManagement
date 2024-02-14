@@ -20,7 +20,11 @@ function Register(props) {
 
     const subMitData = (e)=>{
         e.preventDefault();
-        console.log(userData);
+        if (!userData.name || !userData.department || !userData.batch || !userData.hall || !userData.cardNumber) {
+            alert("Please fill out all fields.");
+            return;
+        }
+        localStorage.setItem("isLogin","true");
     }
     const properties = [
         {id:"registration_0",type:"text",name:"name",placeholder:"Enter Your Name"},
@@ -32,6 +36,7 @@ function Register(props) {
     return (
         <Container fluid="true">
             <div className="formBody">
+                <h4 className="text-center title text-dark">PLEASE REGISTER FIRST</h4>
                 {
                     properties.map((data) => (
                         <InputField id={data.id} name={data.name} type={data.type} placeholder={data.placeholder} inputChange={inputChange} />

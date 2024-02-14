@@ -15,7 +15,7 @@ function InputField({ id, inputChange, type, name, placeholder }) {
             {
                 type && type !== "select" && (
                     <Fragment>
-                        <label className="regiLabel" htmlFor={id}>{placeholder}</label>
+                        <label className="regiLabel" htmlFor={id}>{placeholder} <span className="text-danger">*</span></label>
                         <input
                             className="form-control my-1 regiLabel"
                             type={type}
@@ -30,7 +30,7 @@ function InputField({ id, inputChange, type, name, placeholder }) {
             {
                 type && type === "select" && (
                     <Fragment>
-                        <label className="regiLabel" htmlFor={id}>{placeholder}</label>
+                        <label className="regiLabel" htmlFor={id}>{placeholder} <span className="text-danger">*</span></label>
                         <select
                             className="form-control my-1"
                             onChange={inputChange}
