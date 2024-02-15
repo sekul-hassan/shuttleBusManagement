@@ -1,35 +1,24 @@
-import React, {Fragment, useState} from 'react';
-import {Button, Container, Modal} from "react-bootstrap";
+import React from 'react';
+import {Button, Modal} from "react-bootstrap";
 
-function LoginModal(props) {
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+function LoginModal({show,handleClose}) {
 
     return (
-       <Container>
-           <Button variant="primary" onClick={handleShow}>
-               Open Modal
-           </Button>
-
-           <Modal show={show} onHide={handleClose}>
-               <Modal.Header closeButton>
-                   <Modal.Title>Modal Title</Modal.Title>
-               </Modal.Header>
-               <Modal.Body>
-                   <p>Modal body text goes here.</p>
-               </Modal.Body>
-               <Modal.Footer>
-                   <Button variant="secondary" onClick={handleClose}>
-                       Close
-                   </Button>
-                   <Button variant="primary" onClick={handleClose}>
-                       Save Changes
-                   </Button>
-               </Modal.Footer>
-           </Modal>
-       </Container>
+        <Modal className="mt-5" show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+                <Modal.Title className="text-center">Please Login</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <label className="regiLabel my-2" htmlFor="">Enter Your Name <span className="text-danger">*</span></label>
+                <input className="form-control" type="text" placeholder="Enter Your Name"/>
+                <label className="regiLabel my-2" htmlFor="">Enter Your E-mail <span className="text-danger">*</span></label>
+                <input className="form-control" type="email" placeholder="Enter Your E-mail"/>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button variant="outline-danger" onClick={handleClose}>Close</Button>
+                <Button variant="outline-success" onClick={handleClose}>Login</Button>
+            </Modal.Footer>
+        </Modal>
     );
 }
 

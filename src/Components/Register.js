@@ -6,6 +6,7 @@ function Register(props) {
     const [userData,setUserData] = useState({
         name:"",
         department:"",
+        email:"",
         batch:"",
         hall:"",
         cardNumber:"",
@@ -24,10 +25,12 @@ function Register(props) {
             alert("Please fill out all fields.");
             return;
         }
+        window.alert("Registration Successful")
         localStorage.setItem("isLogin","true");
     }
     const properties = [
         {id:"registration_0",type:"text",name:"name",placeholder:"Enter Your Name"},
+        {id:"registration_1",type:"email",name:"email",placeholder:"Enter Your E-mail"},
         {id:"registration_1",type:"text",name:"department",placeholder:"Enter Your Department"},
         {id:"registration_2",type:"number",name:"batch",placeholder:"Batch Number"},
         {id:"registration_3",type:"select",name:"hall",placeholder:"Select Hall"},
