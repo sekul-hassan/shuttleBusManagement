@@ -28,7 +28,7 @@ function NavBar(props) {
                         <Nav.Link><Link to="/registration" className="navLink">Register</Link></Nav.Link>
                         {!isLogin && (<Nav.Link onClick={handleShow} className="navLink">Login</Nav.Link>)}
                         {isLogin && (<Nav.Link><Link className="navLink" to="/road-map">Road-map</Link></Nav.Link>)}
-                        {isLogin && (<Nav.Link className="navLink">Profile</Nav.Link>)}
+                        {isLogin && (<Nav.Link><Link className="navLink" to="/profile">Profile</Link></Nav.Link>)}
                         {isLogin && (<Nav.Link onClick={logOut} className="navLink">Logout</Nav.Link>)}
                     </Nav>
                 </Navbar.Collapse>

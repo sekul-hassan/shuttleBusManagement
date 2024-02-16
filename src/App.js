@@ -1,10 +1,11 @@
 import './App.css';
 import '../src/Assets/CSS/Custom.css';
-import {Fragment} from "react";
+import React, {Fragment} from "react";
 import RegisterPage from "./Pages/RegisterPage";
 import {Route, Routes} from "react-router-dom";
 import Home from "./Pages/Home";
 import RoadMapPage from "./Pages/RoadMapPage";
+import ProfilePage from "./Pages/ProfilePage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
            <Route path="/" element={<Home/>}/>
            <Route path="registration" element={<RegisterPage/>}/>
            <Route path="road-map" element={<RoadMapPage/>}/>
+           <Route path="profile" element={<ProfilePage/>}/>
        </Routes>
    </Fragment>
   );
