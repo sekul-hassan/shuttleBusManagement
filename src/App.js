@@ -6,6 +6,7 @@ import {Route, Routes} from "react-router-dom";
 import Home from "./Pages/Home";
 import RoadMapPage from "./Pages/RoadMapPage";
 import ProfilePage from "./Pages/ProfilePage";
+import ProtectedProfile from "./Context/ProtectedProfile";
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
        <Routes>
            <Route path="/" element={<Home/>}/>
            <Route path="registration" element={<RegisterPage/>}/>
-           <Route path="road-map" element={<RoadMapPage/>}/>
-           <Route path="profile" element={<ProfilePage/>}/>
+           <Route path="road-map" element={<ProtectedProfile Profile={RoadMapPage}/>}/>
+           <Route path="profile" element={<ProtectedProfile Profile={ProfilePage}/>}/>
        </Routes>
    </Fragment>
   );

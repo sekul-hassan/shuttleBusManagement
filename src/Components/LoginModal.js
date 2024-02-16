@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {Button, Modal} from "react-bootstrap";
+import {useNavigate} from "react-router-dom";
 
 function LoginModal({show,handleClose,setShow}) {
+    const navigate = useNavigate();
     const[loginData,setLoginData] = useState({
         name:"",
         email:""
@@ -22,6 +24,7 @@ function LoginModal({show,handleClose,setShow}) {
             //// post backend
             localStorage.setItem("isLogin","true");
             setShow(false);
+           navigate("/profile");
             return ;
         }
         window.alert("All fields are required")

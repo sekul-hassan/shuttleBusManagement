@@ -44,8 +44,8 @@ function Map(props) {
                         <AddBus busName="Rogina" options={bus2}/>
                         <AddBus busName="Bhoishaki" options={bus3}/>
                         <div className="my-2">
-                            <label className="busLabel mx-3" htmlFor="">Pay with card</label>
-                            <input type="text" className="selectBg border-0" placeholder="Pay with card"/>
+                            <label className="busLabel mx-3" htmlFor="cardNumber">Pay with card</label>
+                            <input type="text" id="cardNumber" className="selectBg border-0" placeholder="Pay with card"/>
                         </div>
                         <div className="my-2">
                             <Button className="submitBtn btnAlign">SUBMIT</Button>
