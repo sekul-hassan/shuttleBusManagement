@@ -107,3 +107,60 @@
 .form-control:focus {
     box-shadow: none;
 }
+.mapBackground{
+    background-image: url("../Images/juBus.jpg");
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.mapBackgroundOverlay{
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.mapContent{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.coloredTitle{
+    color: var(--color4);
+    font-family: Montserrat, serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+.busLabel{
+    color: var(--color4);
+    font-family: Montserrat, serif;
+    font-size: 17px;
+    font-weight: 500;
+    width: 150px;
+}
+.selectBg{
+    background-color: var(--color1);
+    color: black;
+    font-family: Montserrat, serif;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: justify-all;
+    width: 200px;
+}
+.btnAlign{
+    margin-left: 66px;
+}
+.notice{
+    color: var(--color4);
+    font-family: Montserrat, serif;
+    font-size: 16px;
+    font-weight: 500;
+}

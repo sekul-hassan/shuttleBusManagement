@@ -26,7 +26,6 @@ function Register(props) {
             return;
         }
         window.alert("Registration Successful")
-        localStorage.setItem("isLogin","true");
     }
     const properties = [
         {id:"registration_0",type:"text",name:"name",placeholder:"Enter Your Name"},
